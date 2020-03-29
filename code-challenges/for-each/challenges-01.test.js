@@ -10,7 +10,7 @@ Then, write a function named speaker that takes in a string and a callback funct
 
 const greeting = (word) => {
   // Solution code here...
- return word.toUpperCase();
+  return word.toUpperCase();
 };
 
 const speaker = (message, callback) => {
@@ -36,12 +36,21 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
-  return arr[value];
+
+  // let y=arr.push(value);
+  // console.log(y);
+  // return y;
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-return callback(num,arr,times);
+
+  // return callback(num, arr, times);
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,10 +67,19 @@ Return the modified array.
 
 const removeOne = (num, arr) => {
   // Solution code here...
+  if (num % 3 == 2) {
+    arr.pop();
+  }
 };
 
 const removeElements = (arr, callback) => {
   // Solution code here...
+  for(let i=0;i<arr.length;i++){
+    // console.log(i);
+    // console.log(arr[i]);
+   callback(arr[i],arr);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
