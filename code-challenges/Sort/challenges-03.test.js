@@ -27,15 +27,15 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-  console.log(arr);
-  arr.sort((a,b) =>{
-      if(arr == arr.toUpperCase()){
-
-          return a>b};
-
-      }) 
-  console.log(arr);
-  return arr;
+  // console.log(arr);
+  //     if(arr == arr.toUpperCase()){
+    
+    //         return a>b};
+    
+    //     }) 
+    // console.log(arr);
+    // return arr;
+    return arr.sort();
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +46,12 @@ Write a function named sortByLength that takes in an array of strings and return
 
 const sortByLength = (arr) => {
   // Solution code here...
+  // arr.sort((a,b)=>{if(a.length > b.length) {return 1;}});
+  console.log(arr);
+  arr.sort([A-z]);
+  console.log(arr);
+  return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,6 +64,10 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
+  console.log(arr);
+  arr.sort([A-z]);
+  console.log(arr);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
