@@ -16,7 +16,7 @@ const isNum = (input) => {
   // Solution code here...
   let isNumber=input.search(/\w/g);
   return (isNumber ? true : false);
-
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -27,7 +27,74 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-};
+  // let sear=str.search(/\^[A-Z]/g);
+  // console.log(sear);
+  let spli =str.split(/\s/g);
+  console.log(spli);
+  let splitt=[];
+  // let number;
+  // let input = "A string with 3 numbers in it... 42 and 88.";
+  // let number = /\b\d+\b/g;
+  // let number=str.charCodeAt(0);
+  // console.log(number);
+  // let Letters= spli.forEach(e => 
+  //   console.log(e),
+  //    number=spli.charCodeAt(0),
+  // console.log(number)
+  //   );
+    // console.log(Letters)
+    console.log(spli.match(/^[a-z]/g));
+    spli.forEach((val,ind)=>
+   {console.log(val,ind);
+    console.log(val==str.match(/\^[A-Z]+/g));
+    console.log(str.match(/[^A-Z]\+/g));
+  if (val===str.match(/^[A-Z]\*/g)){
+splitt.push(val);
+console.log(splitt);
+}} );
+
+    // for(let i=0;i<=str.length;i++){
+    //   console.log(str.charAt(i));
+    //   if  (str.charAt(i)===str.match(/\^[A-Z]/g)){
+    //     str.push(splitt);
+    //     console.log(str);
+    //   }
+    // }
+
+
+    // let match;
+    // console.log(spli);
+  // while (match = number.exec(str)) {
+  //   console.log("Found", match[0], "at", match.index);
+  // }
+
+  // let isCapitalized1=str.search(/^[A-Z]/.search(str));
+  // console.log(isCapitalized1);
+  // if (spli ===isCapitalized1 ){
+
+  //   let arr1= [isCapitalized1];
+  //   console.log(arr1);
+  //   return arr1;
+//   if( /^[A-Z]/.test(str)){
+// str=spli.slice();
+  
+//   console.log(str);
+//   return str;
+//   }
+// let words = str.matchAll(/^[A-Z]/g)
+// console.log(words);
+// // if (){
+//   console.log(spli.join(' '));
+//   return spli.join(' ');
+// }
+
+
+//     splitStr[i] = splitStr[i].charAt(0).toUpperCase() ;   
+//     str.forEach(str)  
+
+// console.log(splitStr.join(' '));
+// return splitStr.join(' ');
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
