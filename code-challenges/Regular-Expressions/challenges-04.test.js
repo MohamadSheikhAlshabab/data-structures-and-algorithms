@@ -14,9 +14,22 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  let isNumber=input.search(/\w/g);
-  return (isNumber ? true : false);
 
+  let isNumber=/[0-9]+/g;
+  // console.log(isNumber.test(input));
+  // console.log(input);
+  // console.log(isNumber ? isNumber.test(input) : false);
+  return (isNumber ?  isNumber.test(input):false);
+  
+
+  // let isNumber=input.search(/\w\d\^[0-9]+/g);
+  // console.log(isNumber);
+  //  console.log(input);
+  // console.log((isNumber ? true : false));
+  // return (isNumber ? true : false);
+  // let isNumber=input.search(/\*[0-9]/g);
+  // return (isNumber ? true : false);
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -26,8 +39,89 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
+
+  let arryCapitalResults=[];
+  console.log(arryCapitalResults);
+  let spli =str.split(/\s/g);
+  console.log(spli);
+   spli.forEach((val,ind)=>
+   {
+  if (val.match(/^[A-Z]+/g)){
+    arryCapitalResults.push(val)
+    console.log(arryCapitalResults);
+    console.log(arryCapitalResults.length);
+  }} );	
+  return arryCapitalResults ;
+  //return splitt.push(val)?val.match(/^[A-Z]+/g):false;
+
   // Solution code here...
-};
+  // let sear=str.search(/\^[A-Z]/g);
+  // console.log(sear);
+  // let spli =str.split(/\s/g);
+  // console.log(spli);
+  // let number;
+  // let input = "A string with 3 numbers in it... 42 and 88.";
+  // let number = /\b\d+\b/g;
+  // let number=str.charCodeAt(0);
+  // console.log(number);
+  // let Letters= spli.forEach(e => 
+  //   console.log(e),
+  //    number=spli.charCodeAt(0),
+  // console.log(number)
+  //   );
+    // console.log(Letters)
+//     console.log(spli.match(/^[a-z]/g));
+//     spli.forEach((val,ind)=>
+//    {console.log(val,ind);
+//     console.log(val==str.match(/\^[A-Z]+/g));
+//     console.log(str.match(/[^A-Z]\+/g));
+//   if (val===str.match(/^[A-Z]\*/g)){
+// splitt.push(val);
+// console.log(splitt);
+// }} );
+
+    // for(let i=0;i<=str.length;i++){
+    //   console.log(str.charAt(i));
+    //   if  (str.charAt(i)===str.match(/\^[A-Z]/g)){
+    //     str.push(splitt);
+    //     console.log(str);
+    //   }
+    // }
+
+
+    // let match;
+    // console.log(spli);
+  // while (match = number.exec(str)) {
+  //   console.log("Found", match[0], "at", match.index);
+  // }
+
+  // let isCapitalized1=str.search(/^[A-Z]/.search(str));
+  // console.log(isCapitalized1);
+  // if (spli ===isCapitalized1 ){
+
+  //   let arr1= [isCapitalized1];
+  //   console.log(arr1);
+  //   return arr1;
+//   if( /^[A-Z]/.test(str)){
+// str=spli.slice();
+  
+//   console.log(str);
+//   return str;
+//   }
+// let words = str.matchAll(/^[A-Z]/g)
+// console.log(words);
+// // if (){
+//   console.log(spli.join(' '));
+//   return spli.join(' ');
+// }
+
+
+//     splitStr[i] = splitStr[i].charAt(0).toUpperCase() ;   
+//     str.forEach(str)  
+
+// console.log(splitStr.join(' '));
+// return splitStr.join(' ');
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -37,6 +131,19 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let arrOfCity=[];
+  //console.log(arrOfCity);
+  let valid=/^[A-J]/g;
+  arr.forEach((val,indx)=>{
+    if(val.match(valid)){
+
+      arrOfCity.push(val);
+      console.log(arrOfCity);
+    }
+    console.log(arrOfCity);
+  });
+  //console.log(arrOfCity);
+  return arrOfCity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,6 +160,31 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  //let valid=/\^(([Oct]ober)|([oct]ober))$/i;
+ 
+ 
+  //let valid=/^(^\October$)+|^(^\october$)+|^(^\oct$)+|^(^\Oct$)+/g;
+ 
+  let valid=/^[Oo][(ctober)$]/g;
+
+  console.log(input);
+  console.log(valid.test(input)?true:false);
+  return valid.test(input)?true:false;
+ // let invalid=/([^October]|[^Oct]| [^october] | [^oct])/i;
+ // console.log(valid);
+  //console.log(input);
+  //console.log(valid.test(input));
+  //console.log(invalid.test(input));
+  // if(valid.test(input)){
+  //   console.log(input);
+  // console.log(valid.test(input));
+  // return true;
+  // }else {
+    // console.log(input);
+  // console.log(invalid.test(input));
+  //   return false;
+  // }
+ //return valid?valid.test(input):invalid.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,6 +231,7 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (str) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
