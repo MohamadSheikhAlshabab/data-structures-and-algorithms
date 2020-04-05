@@ -104,6 +104,14 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  result.push(recipe);
+  result.slice(1,2);
+  console.log( result.slice(1,2));
+  //result.indexOf(1);
+  //console.log(result);
+ // console.log(recipe);
+ // console.log(result.indexOf(1));
+  
   return result;
 };
 
