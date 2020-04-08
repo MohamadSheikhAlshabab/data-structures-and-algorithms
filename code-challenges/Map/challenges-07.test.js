@@ -11,35 +11,41 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 const forLoopTwoToThe = (arr) => {
     // Solution code here...
-    let squer = arr.map((value, index) => {
   let arr2=[];
+  let arr3=[];
+    let squer = arr.map((value, index) => {
       let power = Math.pow(value, 2);
   
         for(let i=0;i<arr.length;i++){
       if (value >= 0) {
   arr2.push(value);
   
-     //   console.log(value * value);
-       // console.log(power);
-        console.log(arr);
-       console.log(arr2);
-         let nega2=arr2[i] * arr2[i];
-          console.log(nega2);
+       // console.log('v',value * value);
+       //console.log('p',power);
+        console.log('1',arr);
+       console.log('2',arr2);
+         let nega2=arr2[index] * arr2[index];
+          console.log('n2',nega2);
+          arr3.push(nega2);
+           console.log('3',arr3);
         return nega2;
       } else {
         arr2.push(value);
-        //console.log(value);
-        //console.log(power);
-        console.log(arr);
-        console.log(arr2);
-        let nega = 1/(arr2[i] * arr2[i]) ;
-          console.log(nega);
-        return nega;
+       // console.log('v',value);
+         //console.log('p',power);
+        //console.log('1',arr);
+       //console.log('2',arr2);
+        let nega = 1/(Math.pow(2,Math.abs( arr2[index])));
+         // console.log('n',nega);
+            arr3.push(nega);
+           console.log('3',arr3);
+        return arr3;
       }
        }
   
     })
   };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
